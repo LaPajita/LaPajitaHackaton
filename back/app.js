@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: false}));
 
 //RUTA JSON DE PAJITA
 app.get('/', (req, res)=>{
-  database.query('SELECT * FROM cocktails', (error, results)=>{
+  database.query('SELECT * FROM places', (error, results)=>{
     if(error){
       console.log(error)
       res.status(404).send(error)
