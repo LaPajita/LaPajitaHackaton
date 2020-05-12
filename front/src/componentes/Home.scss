@@ -1,0 +1,102 @@
+$Color_rojo: #FF030B;
+$Color_gris: #707070;
+
+.Home {
+
+    & .mapa {
+        height: 30vh;
+    }
+
+    & .cards {
+
+        border: 1px solid $Color_gris;
+        margin: 1vh;
+        border-radius: 30px;
+        -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.49);
+        -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.49);
+        box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.49);
+
+        & .foto {
+            padding: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            border-radius: 30px 0 0 30px;
+
+            @media screen and (max-width: 576px) {
+                height: 200px;
+                border-radius: 30px 30px 0 0;
+                height: 110px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        & .cards_info {
+            padding: 1rem 2rem;
+
+            & .title_icon {
+                & .titulo {
+                    color: $Color_rojo;
+                    font-family: 'Yanone Kaffeesatz',
+                        sans-serif;
+                    font-weight: bold;
+                    font-size: 3rem;
+                }
+            }
+
+            & .puntuation {
+                & .score {
+                    display: flex;
+                    justify-content: flex-start;
+                    & div{
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                & .scoreText {
+                    background-color: $Color_rojo;
+                    padding: 2px;
+                    border-radius: 20px;
+                    color: white;
+                    text-align: center;
+                }
+            }
+
+            & .adress,
+            .telephone,
+            .waiting_state {
+                span {
+                    margin: 0 10px 0 16px;
+                }
+            }
+
+            & .waiting_state {
+                border: 1px solid red;
+                border-radius: 20px;
+                margin-bottom: 10px;
+
+                p {
+                    margin: 4px;
+                }
+            }
+
+            & .detail_button {
+                justify-content: center;
+                background-color: $Color_rojo;
+                border-radius: 20px;
+                padding: 4px;
+                color: white;
+                font-family: 'Yanone Kaffeesatz',
+                    sans-serif;
+                font-size: larger;
+                & p{
+                   margin: 1px; 
+                }
+            }
+        }
+    }
+}
