@@ -20,17 +20,17 @@ const Menu = (props) => {
 
 
   return (
-    <div className='Menu'>
+    <div className='Menu list-group'>
       <Navbar id='myNavBar' color="danger" navbar-dark dark sticky-top expand="md">
         <NavbarBrand href="/">
           <img className='logo'
-            src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
-            alt='logo La Pajita'
-            width='100px'
-            height='auto' />
+          src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
+          alt='logo La Pajita'
+          width= '100px'
+          height='auto' />
         </NavbarBrand>
         <NavbarToggler id='myToggler' onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar className='white'>
+        <Collapse  isOpen={isOpen} navbar className='white'>
           <Nav className="ml-auto super" navbar>
             <NavItem>
               <NavLink href="/components/">Home</NavLink>

@@ -4,6 +4,7 @@ import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
+// import Side from './componentes/menu/Side';
 
 function App() {
   const [hooksState, setHooksState] = useState({});
@@ -14,6 +15,8 @@ function App() {
     <MyContext.Provider value={stateAndFunction}>
       <div className="App">
         <Menu />
+        {/* <Side /> */}
+        
         <Router>
           <Route path="/" exact component={Home} />
         </Router>
