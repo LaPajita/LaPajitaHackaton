@@ -10,6 +10,8 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faUser, faBookmark, faHome} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -33,16 +35,16 @@ const Menu = (props) => {
         <Collapse  isOpen={isOpen} navbar className='white'>
           <Nav className="ml-auto super" navbar>
             <NavItem>
-              <NavLink href="/components/">Home</NavLink>
+              <NavLink href="/components/">Home  <FontAwesomeIcon icon={faHome} /></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Mi Perfil</NavLink>
+              <NavLink href="/components/">Mi Perfil  <FontAwesomeIcon icon={faUser} /></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Mis Reservas</NavLink>
+              <NavLink href="/components/">Mis Reservas  <FontAwesomeIcon icon={faBookmark} /></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Mis Favoritos</NavLink>
+              <NavLink href="/components/">Mis Favoritos  <FontAwesomeIcon icon={faHeart} /></NavLink>
             </NavItem>
           </Nav>
         </Collapse>
