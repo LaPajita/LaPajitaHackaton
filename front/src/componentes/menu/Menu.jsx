@@ -11,7 +11,7 @@ import {
   NavLink,
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faUser, faBookmark, faHome} from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faUser, faBookmark, faHome, faPowerOff} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -35,16 +35,19 @@ const Menu = (props) => {
         <Collapse  isOpen={isOpen} navbar className='white'>
           <Nav className="ml-auto super" navbar>
             <NavItem>
-              <NavLink href="/components/">Home  <FontAwesomeIcon icon={faHome} /></NavLink>
+              <NavLink href="/"><FontAwesomeIcon icon={faHome} /> Home  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Mi Perfil  <FontAwesomeIcon icon={faUser} /></NavLink>
+              <NavLink href="/usuario"><FontAwesomeIcon icon={faUser} /> Mi Perfil</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Mis Reservas  <FontAwesomeIcon icon={faBookmark} /></NavLink>
+              <NavLink href="/reservas"> <FontAwesomeIcon icon={faBookmark} /> Mis Reservas  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Mis Favoritos  <FontAwesomeIcon icon={faHeart} /></NavLink>
+              <NavLink href="/favoritos"><FontAwesomeIcon icon={faHeart} /> Mis Favoritos  </NavLink>
+            </NavItem>
+            <NavItem id='logout'>
+            <NavLink><FontAwesomeIcon icon={faPowerOff} /> Log out</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
