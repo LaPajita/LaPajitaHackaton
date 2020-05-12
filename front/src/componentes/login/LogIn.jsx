@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 /* import 'bootstrap/dist/css/bootstrap.css'; */
 /* import '.LogIn.scss'; */
-import './LogIn.css'; 
+import './LogIn.scss'; 
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
