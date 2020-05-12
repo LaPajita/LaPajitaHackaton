@@ -1,0 +1,40 @@
+[
+{
+    "name": "Cocteleria",
+    "formatted_address": "Carrer del Dr. Ibáñez, 24, 08014 Barcelona, Spain",
+    "location": {
+            "lat": 41.3865467,
+            "lng": 2.1327177
+    },
+    "opening_hours": ["Monday: 5:00 PM – 12:00 AM", "Tuesday: 5:00 PM – 12:00 AM", "Wednesday: 5:00 PM – 12:00 AM", "Thursday: 5:00 PM – 12:00 AM", "Friday: 5:00 PM – 12:00 AM", "Saturday: 5:00 PM – 12:00 AM", "Sunday: 5:00 PM – 12:00 AM"],
+    "rating": 4.8,
+    "average_spend_time" : 45,
+    "waiting_list": true
+},
+{
+    "name": "Gimlet",
+    "formatted_address": "Carrer de Santaló, 46, 08021 Barcelona, Spain",
+    "location": {
+                "lat": 41.396101,
+                "lng": 2.145365
+            },
+    "opening_hours": ["Monday: 6:00 PM – 1:00 AM", "Tuesday: 6:00 PM – 1:00 AM", "Wednesday: 6:00 PM – 1:00 AM", "Thursday: 6:00 PM – 2:30 AM", "Friday: 6:00 PM – 3:00 AM", "Saturday: 6:00 PM – 3:00 AM", "Sunday: Closed"],
+    "rating": 4.3,
+    "average_spend_time" : 110,
+    "waiting_list": false
+},
+{
+    "name": "Negroni Cocktail Bar",
+    "formatted_address": "Carrer de Joaquín Costa, 46, 08001 Barcelona, Spain",
+    "location": {
+        "lat": 41.3829846,
+        "lng": 2.1655358
+    },
+    "opening_hours": ["Monday: 7:00 PM – 2:30 AM", "Tuesday: 7:00 PM – 2:30 AM", "Wednesday: 7:00 PM – 2:30 AM", "Thursday: 7:00 PM – 2:30 AM", "Friday: 7:00 PM – 3:00 AM", "Saturday: 7:00 PM – 3:00 AM", "Sunday: Closed"],
+    "rating": 4.5,
+    "average_spend_time" : 73,
+    "waiting_list": true
+
+}]
+
+
