@@ -1,5 +1,12 @@
 .Registration {
-    background-image: url('https://s6.gifyu.com/images/background-login2.png');
+    background-color:  #FF030B;
+    background-image: url("https://s6.gifyu.com/images/background-login239682d18d609bbbf.png");
+    box-shadow: inset 0 0 0 1000px rgba(54, 1, 2, 0.521);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
     padding: 2rem;
   
     .login-form{
@@ -9,7 +16,7 @@
         height: auto;
         border: 1px solid transparent;
         border-radius: 35px;
-        background-color: rgba(255, 251, 252, 0.4);;
+        background-color: rgba(255, 251, 252, 0.5);;
       }
       
       .btn-block {
