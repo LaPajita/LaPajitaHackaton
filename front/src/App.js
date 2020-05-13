@@ -15,6 +15,7 @@ function App() {
     <MyContext.Provider value={stateAndFunction}>
       <div className="App">
         <Menu />
+        <Carousel/>
         {/* <Side /> */}
         
         <Router>
