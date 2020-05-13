@@ -1,5 +1,7 @@
 
 import React, {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faUser, faKey} from '@fortawesome/free-solid-svg-icons';  
 /* import 'bootstrap/dist/css/bootstrap.css'; */
 /* import '.LogIn.scss'; */
 import './LogIn.scss'; 
@@ -34,25 +36,27 @@ const LogIn = () => {
 
       return (
       
-        <div id="loginInPage">
+        <div className="loginInPage">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 p-2">
-                        <div className="headingForm text-center ">
-                            <h1>Lapajita</h1>
-                            {/* <a href="Entrar">Entrar</a> 
-
-                            <a href="Registrarme">Registrarme</a> */}
-                        </div>
+                    <div class="col-12 ">
+                      <div className="headingForm text-center ">
+                      <img className='logo'
+                            src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
+                            alt='logo La Pajita'
+                            width= '100px'
+                            height='auto' />
+                           
+                              </div>
                         <div className="select text-center ">
-                            <a href="Entrar">Entrar</a>
-                            <a href="Registrarme">Registrarme</a>
+                            <a className="loginLink1" href="Entrar">Entrar</a>
+                            <a className="loginLink2" href="Registrarme">Registrarme</a>
                         </div>
 
-                            <Form onSubmit={handleSubmit} className="login-form p-5">
+                            <Form onSubmit={handleSubmit} className="login-form">
                             
                                 <FormGroup>
-                                    <Label className="labelForm" >Usuario/ Correo</Label>
+                                    <Label className="labelForm">{<FontAwesomeIcon icon={faUser} />} Usuario</Label>
                                         <Input 
                                             name='email'
                                             type='email'
@@ -62,7 +66,7 @@ const LogIn = () => {
                                             />
                                 </FormGroup>
                                 <FormGroup>
-                                        <Label>Contraseña</Label>
+                                     <Label className="labelForm">{<FontAwesomeIcon icon={faKey} />}  Contraseña </Label>  
                                         <Input 
                                             name='password' 
                                             type='password' 
@@ -81,7 +85,7 @@ const LogIn = () => {
                             
                 */}
                                 <div className="formButton">
-                                    <Button type="submit" className="btn-lg btn-dark btn-block"> ENTRAR </Button>
+                                    <Button type="submit" className="btn-lg btn-dark btn-block buttonStyle ">  <span>ENTRAR</span></Button>
                                 </div>
                     </div>
                 </div>
@@ -92,3 +96,11 @@ const LogIn = () => {
 }
 
 export default LogIn;
+
+/* 
+<div class="btn-holder">
+  <button class="btn btn-1 hover-filled-slide-down">
+    <span>hover me</span>
+  </button>
+ </div>
+   */
