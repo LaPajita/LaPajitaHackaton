@@ -3,6 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 const database = require('./conf');
+const bcrypt = require('bcrypt');
 
 
 app.use(express.json());
@@ -33,7 +34,56 @@ app.get('/', (req, res) => {
   })
 })
 
+//Ruta Register darse de alta
+app.post('/register', async (req, res)=>{
+  let errors = [];
 
+  const email = req.body.email;
+  const name = req.body.name;
+  const password = req.body.password;
+  const confirmPassword = req.body.confirmPassword;
+  const profile_image = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+
+  //-----Errores----
+
+  //---1.Sin campos vacíos---//
+  if(!email || !name || !password || !confirmPassword){
+    errors.push({msg: "Faltan campos por rellenar"})
+  }
+
+  //---2.Contraseña corta
+  if(password.length < 6){
+    errors.push({msg: "La contraseña tiene que tener al menos 6 caracteres"})
+  }
+
+  //---3.Contraseñas iguales??
+  if(password !== confirmPassword){
+    errors.push({msg:"Las contraseñas no coinciden"})
+  }
+
+  //---4.Comprobar que el email tenga "@"
+  if(!email.includes("@")){
+    errors.push({msg:"Email incorrecto"})
+  }
+
+  if(errors.length > 0){
+    res.send(errors)
+  }else{
+    const hashedPassword = await bcrypt.hash(password ,5)
+    const validatedBody = {
+      name: name,
+      password: hashedPassword,
+      email: email,
+      profile_image: "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+  }
+
+    database.query('INSERT INTO users SET ?', validatedBody, (error, results)=>{
+      !error
+      ? res.send('Usuario creado con éxito')
+      : res.send(error)
+    })
+  }
+})
 
 
 //ABRIMOS PUERTO
