@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './componentes/Home';
-import LogIn from './componentes/login/LogIn';
 import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
+import Carousel from './componentes/Carousel/Carousel';
 // import Side from './componentes/menu/Side';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
     <MyContext.Provider value={stateAndFunction}>
       <div className="App">
         <Menu />
+        <Carousel />
         {/* <Side /> */}
         
         <Router>
