@@ -9,6 +9,7 @@ import Registration from './componentes/Registration/Registration';
 // import CarouselComponent from './componentes/Carousel/CarouselComponent';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
+/* import Carta from './componentes/DetailBar/Carta'; */
 // import Side from './componentes/menu/Side';
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/LogIn" exact component={LogIn} />
           <Route path='/barDetail' component={DetailBar}/>
           <Route path="/Registration" exact component={Registration} />
+         {/*  <Route path="/Carta" exact component={Carta} /> */}
           {/* <Route path='/barDetail' component={CarouselComponent}/> */}
 
         </Router>
