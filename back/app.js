@@ -95,8 +95,14 @@ app.post('/register', async (req, res) => {
 
     database.query('INSERT INTO users SET ?', validatedBody, (error, results) => {
       !error
-        ? res.send('Usuario/a creado con éxito')
-        : res.send(error)
+        ? database.query('SELECT id, name, email, profile_image FROM users WHERE email=?', req.body.email, (error, results) => {
+          !error
+            ? res.send(results)
+            : res.send(error)
+        })
+
+Pa
+      : res.send(error)
     })
   }
 })
