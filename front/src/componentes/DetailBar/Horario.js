@@ -2,7 +2,9 @@ import React from 'react';
 
 const Horario=()=>{
     return(
-        <p>Horario</p>
+        <div>
+           <p>Horario</p> 
+        </div>
     )
 }
 
