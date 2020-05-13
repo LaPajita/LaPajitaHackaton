@@ -1,0 +1,27 @@
+.Menu {
+    /* cambiar el color de fondo y fuentes a la barra */
+#myNavBar {
+    background-color: #FF030B !important;
+    border-color: #FF030B;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 15px;
+    color: #fff ;
+}
+
+logo {
+    width: '1rem';
+    height:'1rem';
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    color: #fff !important;
+}
+#myToggler {
+    color: rgb(255,255,255) !important;
+    stroke-linecap: round;
+
+}
+}
