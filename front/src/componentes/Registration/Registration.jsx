@@ -55,7 +55,7 @@ const Registration = () => {
         <div className='Registration'>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-12 p-2">
+                    <div className="col-12">
                         <div className="headingForm text-center ">
                             <img className='logo'
                                 src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
@@ -67,7 +67,7 @@ const Registration = () => {
                             <Link to="./LogIn" className="loginLink1"> Entrar</Link>
                             <Link to="./Registration" className="loginLink2"> Registrarme</Link>
                         </div>
-                        <Form onSubmit={handleSubmit} className="login-form p-5">
+                        <Form onSubmit={handleSubmit} className="login-form">
                             <FormGroup>
                                 <Label className="labelForm"><FontAwesomeIcon icon={faEnvelope} />  Correo</Label>
                                 <Input
