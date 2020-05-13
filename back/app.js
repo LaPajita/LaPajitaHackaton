@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 //RUTA JSON DE PAJITA
-app.get('/', (req, res) => {
+app.get('/places', (req, res) => {
   database.query('SELECT * FROM places', (error, results) => {
     if (error) {
       console.log(error);
