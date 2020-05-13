@@ -34,5 +34,18 @@ $Color_gris: #707070;
 
     & .menuOptions {
         justify-content: space-around;
+        cursor: pointer;
+    }
+
+        &   p{
+                font-size: 1.2rem;
+        }
+        &   p:hover {
+                color: #707070;
+                font-weight: bold;
+                border-bottom: 4px solid $Color_rojo;
     }
 }
+
+
+

@@ -6,17 +6,17 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     padding: 2rem;
   
     .login-form{
         width: 100%;
-        max-width: 1000px;
+        /* max-width: 1000px; */
         margin: auto;
         height: auto;
         border: 1px solid transparent;
         border-radius: 35px;
-        background-color: rgba(255, 251, 252, 0.5);;
+        background-color:  rgba(172, 96, 99, 0.685);
       }
       
       .btn-block {
@@ -228,3 +228,5 @@
    
  }
 }
+
+
