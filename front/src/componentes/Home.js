@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import GoogleMapReact from 'google-map-react';
 import './Home.scss';
 import SimpleMap from './Map/SimpleMap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
