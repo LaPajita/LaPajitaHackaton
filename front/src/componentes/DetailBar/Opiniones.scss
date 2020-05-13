@@ -1,0 +1,53 @@
+.Opiniones {
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: min-content;
+
+    .comment-button {
+        margin: 2rem;
+        background-color: #FF030B;
+        color: white;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        border-radius: 35px;
+        border-color: #FF030B;
+        font-weight: bold;
+        height: 1.5rem;
+        text-align: center;
+        }
+
+    .opiniones-card {
+        border-radius: 35px;
+        border: #707070 1px solid;
+        margin: 2rem;
+        height: 25vh;
+        display: grid;
+        // grid-template-columns: 0.3fr 1fr;
+        // grid-template-rows: 0.3fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "image text text text text ."
+        ".     text text text text link";                  
+        .avatar {
+            border-radius: 50%;
+            width: 25vh;
+            height: 25vh;
+        }
+        .user-name {
+            color: #707070;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+
+
+        }
+        .rate {
+
+        }
+        .rate {
+
+        }
+    }
+}
