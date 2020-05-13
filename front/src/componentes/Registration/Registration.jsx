@@ -60,7 +60,7 @@ const Registration = () => {
                             <img className='logo'
                                 src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
                                 alt='logo La Pajita'
-                                width='100px'
+                                width='200px'
                                 height='auto' />
                         </div>
                         <div className="select text-center ">
