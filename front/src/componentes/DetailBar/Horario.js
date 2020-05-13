@@ -1,37 +1,85 @@
-import React, { Fragment } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faUser} from '@fortawesome/free-solid-svg-icons';
 
+import React from "react";
+import "./Horario.css";
 
-const Horario=()=>{
-    return(
-        <Fragment>
-            <article className='timecard'>
-                <div className='titulo-lista'>
-                Lista de espera disponible
-                </div>
-                <div className='detalle'>
-                <FontAwesomeIcon icon={faUser} />3 personas en lista
-                </div>
-                <div className='detalle'>
-                <FontAwesomeIcon icon={faClock} />Espera aproximada:  30 mins
-                </div>
-                <div className='apuntarme'>
-                <button>
-                    APUNTARME
+const Horario = () => {
+  // return <p>Horario</p>;
+
+  return (
+    <React.Fragment>
+      <div className="lista-espera">
+        <div className="container-fluid_lista">
+          <div className="row">
+              <div className="col-12">
+            <h4>Lista de espera disponible</h4>
+            </div>
+          </div>
+
+          <div className="row personas">
+              <div className="col-12">
+            <p>3 personas en lista</p>
+            </div>
+          </div>
+
+          <div className="row tiempo">
+              <div className="col-12">
+                <p>Espera aproximada: 30 mins</p>
+              </div>
+          </div>
+
+          <div className="row">
+            <div className="col-12">
+                <button onClick className="miBoton">
+                Apuntarme
                 </button>
-                </div>
-            </article>
-            <article className='weekcard'>
-                <div >
+            </div>
+          </div>
+        </div>
+      </div>
 
-                </div>
-
-            </article>
-            <p>Horario</p>
-        </Fragment>
+      <div className="Horario">
+        <div className="container-fluid">
         
-    )
-}
+            <div className="row">
+              <div className="col-4 dia">Lunes</div>
+              <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+              <hr></hr>
+            </div>
+          
+
+          <div className="row">
+            <div className="col-4 dia">Martes</div>
+            <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+          </div>
+
+          <div className="row">
+            <div className="col-4 dia">Miércoles</div>
+            <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+          </div>
+
+          <div className="row">
+            <div className="col-4 dia">Jueves</div>
+            <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+          </div>
+
+          <div className="row">
+            <div className="col-4 dia">Viernes</div>
+            <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+          </div>
+
+          <div className="row">
+            <div className="col-4 dia">Sábado</div>
+            <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+          </div>
+
+          <div className="row">
+            <div className="col-4 dia">Domingo</div>
+            <div className="col-8 hora">Cerrado</div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default Horario;

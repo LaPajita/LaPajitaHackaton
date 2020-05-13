@@ -4,9 +4,12 @@ import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.scss";
 import Menu from './componentes/menu/Menu';
+import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponent';
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
+/* import Carta from './componentes/DetailBar/Carta'; */
+// import Side from './componentes/menu/Side';
 import Opiniones from './componentes/DetailBar/Opiniones';
 import Horario from './componentes/DetailBar/Horario';
 import Mapa from './componentes/DetailBar/Mapa';
@@ -46,7 +49,6 @@ function App() {
             
             :
             <>
-              <Menu />
               <Router>
               <Route path="/" exact component={Home} />
               <Route path="/LogIn" exact component={LogIn} />
