@@ -1,7 +1,8 @@
 
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faUser, faKey} from '@fortawesome/free-solid-svg-icons';  
+import { faUser, faKey} from '@fortawesome/free-solid-svg-icons'; 
+import { Link } from 'react-router-dom';
 /* import 'bootstrap/dist/css/bootstrap.css'; */
 /* import '.LogIn.scss'; */
 import './LogIn.scss'; 
@@ -49,8 +50,8 @@ const LogIn = () => {
                            
                               </div>
                         <div className="select text-center ">
-                            <a className="loginLink1" href="Entrar">Entrar</a>
-                            <a className="loginLink2" href="Registrarme">Registrarme</a>
+                            <Link to="./LogIn" className="loginLink1"> Entrar</Link>
+                            <Link to="./Registration" className="loginLink2"> Registrarme</Link>
                         </div>
 
                             <Form onSubmit={handleSubmit} className="login-form">
