@@ -8,7 +8,6 @@ import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponen
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
-<<<<<<< HEAD
 /* import Carta from './componentes/DetailBar/Carta'; */
 // import Side from './componentes/menu/Side';
 import Opiniones from './componentes/DetailBar/Opiniones';
@@ -16,8 +15,6 @@ import Horario from './componentes/DetailBar/Horario';
 import Mapa from './componentes/DetailBar/Mapa';
 
 
-=======
->>>>>>> e1fdae9b7caf88a74ae831bc17af95926c4cf394
 
 function App() {
   const [hooksState, setHooksState] = useState({});

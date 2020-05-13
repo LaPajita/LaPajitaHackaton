@@ -1,0 +1,36 @@
+.justifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.lista {
+  border: 2px solid red;
+  margin: 10px 2rem;
+  padding: 23px;
+  border-radius: 60px;
+
+  & p {
+    color: grey;
+  }
+
+  & .miBoton {
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    padding: 0.5rem;
+    width: 10rem;
+    border-style: none;
+  }
+}
+
+.Horario {
+  padding: 40px 0;
+
+  & hr {
+    width: 100%;
+  }
+
+  & p {
+    margin: 0 1rem;
+  }
+}
