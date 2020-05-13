@@ -39,10 +39,10 @@ const LogIn = () => {
       
         <div className="loginInPage">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row p-1">
                     <div class="col-12 ">
                       <div className="headingForm text-center ">
-                      <img className='logo'
+                      <img id='logoLogin'
                             src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
                             alt='logo La Pajita'
                             width= '100px'
