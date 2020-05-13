@@ -4,8 +4,9 @@ import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
-import CarouselComponent from './componentes/Carousel/CarouselComponent';
+import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponent';
 import LogIn from './componentes/login/LogIn';
+import DetailBar from './componentes/DetailBar/DetailBar';
 // import Side from './componentes/menu/Side';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Router>
           <Route path="/" exact component={Home} />
           <Route path="/LogIn" exact component={LogIn} />
-          <Route path='/barDetail' component={CarouselComponent}/>
+          <Route path='/barDetail' component={DetailBar}/>
         </Router>
       </div>
     </MyContext.Provider>
