@@ -6,6 +6,7 @@ import "./App.css";
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
+/* import Carta from './componentes/DetailBar/Carta'; */
 // import Side from './componentes/menu/Side';
 
 function App() {

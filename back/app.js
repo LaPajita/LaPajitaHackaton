@@ -34,6 +34,22 @@ app.get('/places', (req, res) => {
   })
 })
 
+//Ruta buscar usuarios por :id
+app.get('/usuarios/:id', (req, res)=>{
+  database.query('SELECT * FROM users WHERE id = ?', req.params.id, (error, results)=>{
+    if(error){
+      console.log(error)
+      res.status(404).send(error)
+    }else{
+      console.log(results)
+      res.status(200).send(results)
+    }
+  })
+})
+
+
+
+
 //Ruta Register darse de alta
 app.post('/register', async (req, res) => {
   let errors = [];
@@ -113,16 +129,27 @@ app.post('/login', (req, res) => {
 //Ruta para apuntarse a lista de espera
 app.post('/:id_places/waitinglist/:id_user', (req, res) => {
 
-  const id_places = req.params.id_places;
-  const id_user = req.params.id_user;
-
-  database.query('SELECT id_user FROM lista_espera WHERE id_places=?', [id_user, id_places], (error, results) => {
-    error
-      ? res.send(error)
-      : res.send(results)
-    const a = results[0].id_places
-    console.log(a)
-  })
+  const bodyDatos= {
+    id_places : req.params.id_places,
+    id_user : req.params.id_user
+  }
+ 
+  database.query('INSERT INTO lista_espera SET ?', bodyDatos, (error, results)=>{
+    if(error){
+      console.log(error)
+      res.send(error)
+    }else{
+      console.log(results)
+      res.send(results)
+    }
+  } )
+  // database.query('SELECT id_user FROM lista_espera WHERE id_places=?', [id_user, id_places], (error, results) => {
+  //   error
+  //     ? res.send(error)
+  //     : res.send(results)
+  //   const a = results[0].id_places
+  //   console.log(a)
+  // })
 
 
 })
