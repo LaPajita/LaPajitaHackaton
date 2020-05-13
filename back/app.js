@@ -172,24 +172,19 @@ app.post('/:id_places/waitinglist/:id_user', (req, res) => {
   })
 })
 
-// //Ruta para desapuntarse a la lista de espera
-// app.delete('/1/desapuntarse/:id_user', (req, res) => {
+//Ruta para desapuntarse a la lista de espera
+app.delete('/:id_places/desapuntarse/:id_user', (req, res) => {
 
-//   const bodyDatos = {
-//     // id_places: req.params.id_places,
-//     id_user: req.params.id_user
-//   }
-
-//   database.query('DELETE FROM lista_espera WHERE id_user = ?', bodyDatos, (error, results) => {
-//     if (error) {
-//       console.log(error)
-//       res.send(error)
-//     } else {
-//       console.log(results)
-//       res.send(results)
-//     }
-//   })
-// })
+  database.query('DELETE FROM lista_espera WHERE id_user = ? AND id_places = ?', [req.params.id_user, req.params.id_places], (error, results) => {
+    if (error) {
+      console.log(error)
+      res.send(error)
+    } else {
+      console.log(results)
+      res.send(results)
+    }
+  })
+})
 
 // //Ruta para eliminar toda la lista_espera de parte del manager
 // app.delete('/vaciar', (req, res)=>{
