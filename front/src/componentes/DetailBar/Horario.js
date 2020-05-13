@@ -27,7 +27,7 @@ const Horario = () => {
               </div>
           </div>
 
-          <div className="row">
+          <div className="row miBoton2">
             <div className="col-12">
                 <button onClick className="miBoton">
                 Apuntarme

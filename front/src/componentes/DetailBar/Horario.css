@@ -16,10 +16,13 @@
 } */
 
 .lista-espera {
-    color: red;
+    /* color: red;
     display: flex;
     height: 45vh;
-    border-radius: 10%;
+    border-radius: 10%; */
+
+    padding: 1rem;
+    padding-left: 1.5rem;
     /* width: 50%;
     margin-left: 25%; */
     /* border-style: double; */
@@ -67,12 +70,11 @@
 
   .Horario {
       padding: 1rem;
-      padding-top: 100px;
-      padding-left: 0.5rem;
+      padding-left: 1.5rem;
     }
 
     .container-fluid_lista{
-        padding: 5rem;
+        /* padding: 5rem; */
         justify-content: center;
         /* padding-top: 10%; */
         border-style: 2px red;
@@ -82,6 +84,21 @@
     hr{
         width: 100%;
     }
+
+    .row h4{
+        text-align: center;
+    }
   
+    .row.tiempo {
+        text-align: center;
+    }
+
+    .row.personas {
+        text-align: center;
+    }
+
+    .row.miBoton2 {
+        text-align: center;
+    }
 
   
