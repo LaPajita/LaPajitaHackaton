@@ -90,7 +90,7 @@ app.post('/register', async (req, res) => {
       name: name,
       password: hashedPassword,
       email: email,
-      profile_image: "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+      profile_image: profile_image
     }
 
     database.query('INSERT INTO users SET ?', validatedBody, (error, results) => {
@@ -117,7 +117,7 @@ app.post('/login', (req, res) => {
         res.send('Este usuario no existe');
       } else {
         if (await bcrypt.compare(req.body.password, thisUser.password)) {
-          res.send('La constraseña coincide. Sesión iniciada')
+          //Enviar usuario que loguea
         } else {
           res.send('La constraseña o el usuario no coincide')
         }
@@ -143,15 +143,11 @@ app.post('/:id_places/waitinglist/:id_user', (req, res) => {
       res.send(results)
     }
   } )
-  // database.query('SELECT id_user FROM lista_espera WHERE id_places=?', [id_user, id_places], (error, results) => {
-  //   error
-  //     ? res.send(error)
-  //     : res.send(results)
-  //   const a = results[0].id_places
-  //   console.log(a)
-  // })
+})
 
-
+//Ruta para desapuntarse a la lista de esperea
+app.delete('/desapuntarse/:id', (req, res)=>{
+  database.query('DELETE FROM lista_espera WHERE id = ?', )
 })
 
 
