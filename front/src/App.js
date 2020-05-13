@@ -2,12 +2,19 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './componentes/Home';
 import MyContext from "./context";
-import "./App.css";
+import "./App.scss";
 import Menu from './componentes/menu/Menu';
 import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponent';
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
+/* import Carta from './componentes/DetailBar/Carta'; */
+// import Side from './componentes/menu/Side';
+import Opiniones from './componentes/DetailBar/Opiniones';
+import Horario from './componentes/DetailBar/Horario';
+import Mapa from './componentes/DetailBar/Mapa';
+
+
 
 function App() {
   const [hooksState, setHooksState] = useState({});
@@ -38,14 +45,20 @@ function App() {
       <div className="App">
         {
           loading ?
-            <p>loading...</p>
+             <div className='ripplerer'><div><div className="lds-ripple"><div></div><div></div></div></div></div>
+            
             :
             <>
               <Router>
-                <Route path="/" exact component={Home} />
-                <Route path="/LogIn" exact component={LogIn} />
-                <Route path='/barDetail' component={DetailBar} />
-                <Route path="/Registration" exact component={Registration} />
+              <Route path="/" exact component={Home} />
+              <Route path="/LogIn" exact component={LogIn} />
+              <Route path='/barDetail' component={DetailBar}/>
+              <Route path="/registro" exact component={ Registration } />
+              {/* <Route path='/barDetail' component={CarouselComponent}/> */}
+              <Route path="/opiniones" exact component={ Opiniones } />
+              <Route path="/horario" exact component={ Horario } />
+              <Route path="/mapa" exact component={ Mapa } />
+
               </Router>
             </>
         }
@@ -55,3 +68,4 @@ function App() {
 }
 
 export default App;
+
