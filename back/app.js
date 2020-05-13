@@ -5,7 +5,7 @@ require('dotenv').config();
 const database = require('./conf');
 
 
-
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Middleware para no tener problemas con los CORS cuando hagamos peticiones a nuestra API en Heroku
@@ -24,11 +24,11 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   database.query('SELECT * FROM places', (error, results) => {
     if (error) {
-      console.log(error)
-      res.status(404).send(error)
+      console.log(error);
+      res.status(404).send(error);
     } else {
-      console.log(results)
-      res.status(200).send(results)
+      console.log(results);
+      res.status(200).send(results);
     }
   })
 })
