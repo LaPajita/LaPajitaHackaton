@@ -18,8 +18,11 @@
 .lista-espera {
     color: red;
     display: flex;
-    height: 35vh;
+    height: 45vh;
     border-radius: 10%;
+    /* width: 50%;
+    margin-left: 25%; */
+    /* border-style: double; */
     
 }
 
@@ -65,6 +68,7 @@
   .Horario {
       padding: 1rem;
       padding-top: 100px;
+      padding-left: 0.5rem;
     }
 
     .container-fluid_lista{
@@ -72,6 +76,11 @@
         justify-content: center;
         /* padding-top: 10%; */
         border-style: 2px red;
+        height: 50vh;
+    }
+
+    hr{
+        width: 100%;
     }
   
 
