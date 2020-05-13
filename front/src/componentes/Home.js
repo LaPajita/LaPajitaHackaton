@@ -43,6 +43,7 @@ function Home() {
                 return { backgroundColor: "#43A41560" };
         }
     }
+    
     return (
         <div className="Home">
             < Menu />

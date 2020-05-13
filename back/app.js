@@ -101,7 +101,7 @@ app.post('/register', async (req, res) => {
             : res.send(error)
         })
 
-Pa
+
       : res.send(error)
     })
   }
@@ -173,6 +173,11 @@ app.delete('/:id_places/desapuntarse/:id_user', (req, res) => {
       res.send(results)
     }
   })
+})
+
+//Ruta para eliminar toda la lista_espera de parte del manager
+app.delete('/vaciar', (req, res)=>{
+  database.query('DELETE FROM lista_espera')
 })
 
 
