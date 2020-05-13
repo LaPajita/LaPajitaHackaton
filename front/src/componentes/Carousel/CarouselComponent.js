@@ -1,12 +1,8 @@
-// import React from "react";
-// import { Carousel } from 'react-bootstrap';
-
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./Carousel.css";
-import { Carousel } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel'
 
-class Carousel extends React.Component {
+class CarouselComponent extends React.Component {
   render() {
     return (
       <Carousel>
@@ -52,4 +48,4 @@ class Carousel extends React.Component {
   }
 }
 
-export default Carousel;
+export default CarouselComponent;
