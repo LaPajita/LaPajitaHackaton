@@ -50,6 +50,7 @@ app.get('/usuarios/:id', (req, res) => {
 
 
 
+
 //Ruta Register darse de alta
 app.post('/register', async (req, res) => {
   let errors = [];
@@ -95,8 +96,14 @@ app.post('/register', async (req, res) => {
 
     database.query('INSERT INTO users SET ?', validatedBody, (error, results) => {
       !error
-        ? res.send('Usuario/a creado con éxito')
-        : res.send(error)
+        ? database.query('SELECT id, name, email, profile_image FROM users WHERE email=?', req.body.email, (error, results) => {
+          !error
+            ? res.send(results)
+            : res.send(error)
+        })
+
+
+      : res.send(error)
     })
   }
 })
@@ -120,7 +127,7 @@ app.post('/login', (req, res) => {
           //Enviar usuario que loguea
           database.query('SELECT id, name, email, profile_image FROM users WHERE email=?', req.body.email, (error, results) => {
             error
-              ? res.send(error)
+              ? res.send(error) 
               : res.send(results)
           })
         } else {
@@ -130,6 +137,21 @@ app.post('/login', (req, res) => {
     }
   })
 })
+
+//Ruta para ver las personas apuntadas a un waiting list
+app.get('/:id_places/waitinglist', (req, res)=>{
+  database.query('SELECT COUNT(id_user) AS total_de_clientes, id_places FROM `lista_espera` GROUP BY 2 HAVING id_places = ? ', req.params.id_places, (error,results)=>{
+    if(error){
+      console.log(error)
+      res.status(404).send(error)
+    }else{
+      console.log(results)
+      res.status(200).send(results)
+    }
+  } )
+})
+
+
 
 //Ruta para apuntarse a lista de espera
 app.post('/:id_places/waitinglist/:id_user', (req, res) => {
@@ -153,12 +175,7 @@ app.post('/:id_places/waitinglist/:id_user', (req, res) => {
 //Ruta para desapuntarse a la lista de espera
 app.delete('/:id_places/desapuntarse/:id_user', (req, res) => {
 
-  const bodyDatos = {
-    id_places: req.params.id_places,
-    id_user: req.params.id_user
-  }
-
-  database.query('DELETE FROM lista_espera WHERE id_places? AND id_user?', bodyDatos, (error, results) => {
+  database.query('DELETE FROM lista_espera WHERE id_user = ? AND id_places = ?', [req.params.id_user, req.params.id_places], (error, results) => {
     if (error) {
       console.log(error)
       res.send(error)
@@ -168,6 +185,11 @@ app.delete('/:id_places/desapuntarse/:id_user', (req, res) => {
     }
   })
 })
+
+// //Ruta para eliminar toda la lista_espera de parte del manager
+// app.delete('/vaciar', (req, res)=>{
+//   database.query('DELETE FROM lista_espera')
+// })
 
 
 
