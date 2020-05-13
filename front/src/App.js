@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.css";
+import Menu from './componentes/menu/Menu';
+import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponent';
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';

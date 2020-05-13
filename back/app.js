@@ -35,12 +35,12 @@ app.get('/places', (req, res) => {
 })
 
 //Ruta buscar usuarios por :id
-app.get('/usuarios/:id', (req, res)=>{
-  database.query('SELECT * FROM users WHERE id = ?', req.params.id, (error, results)=>{
-    if(error){
+app.get('/usuarios/:id', (req, res) => {
+  database.query('SELECT * FROM users WHERE id = ?', req.params.id, (error, results) => {
+    if (error) {
       console.log(error)
       res.status(404).send(error)
-    }else{
+    } else {
       console.log(results)
       res.status(200).send(results)
     }
@@ -95,8 +95,14 @@ app.post('/register', async (req, res) => {
 
     database.query('INSERT INTO users SET ?', validatedBody, (error, results) => {
       !error
-        ? res.send('Usuario/a creado con éxito')
-        : res.send(error)
+        ? database.query('SELECT id, name, email, profile_image FROM users WHERE email=?', req.body.email, (error, results) => {
+          !error
+            ? res.send(results)
+            : res.send(error)
+        })
+
+
+      : res.send(error)
     })
   }
 })
@@ -118,6 +124,11 @@ app.post('/login', (req, res) => {
       } else {
         if (await bcrypt.compare(req.body.password, thisUser.password)) {
           //Enviar usuario que loguea
+          database.query('SELECT id, name, email, profile_image FROM users WHERE email=?', req.body.email, (error, results) => {
+            error
+              ? res.send(error)
+              : res.send(results)
+          })
         } else {
           res.send('La constraseña o el usuario no coincide')
         }
@@ -129,25 +140,44 @@ app.post('/login', (req, res) => {
 //Ruta para apuntarse a lista de espera
 app.post('/:id_places/waitinglist/:id_user', (req, res) => {
 
-  const bodyDatos= {
-    id_places : req.params.id_places,
-    id_user : req.params.id_user
+  const bodyDatos = {
+    id_places: req.params.id_places,
+    id_user: req.params.id_user
   }
- 
-  database.query('INSERT INTO lista_espera SET ?', bodyDatos, (error, results)=>{
-    if(error){
+
+  database.query('INSERT INTO lista_espera SET ?', bodyDatos, (error, results) => {
+    if (error) {
       console.log(error)
       res.send(error)
-    }else{
+    } else {
       console.log(results)
       res.send(results)
     }
-  } )
+  })
 })
 
-//Ruta para desapuntarse a la lista de esperea
-app.delete('/desapuntarse/:id', (req, res)=>{
-  database.query('DELETE FROM lista_espera WHERE id = ?', )
+//Ruta para desapuntarse a la lista de espera
+app.delete('/:id_places/desapuntarse/:id_user', (req, res) => {
+
+  const bodyDatos = {
+    id_places: req.params.id_places,
+    id_user: req.params.id_user
+  }
+
+  database.query('DELETE FROM lista_espera WHERE id_places? AND id_user?', bodyDatos, (error, results) => {
+    if (error) {
+      console.log(error)
+      res.send(error)
+    } else {
+      console.log(results)
+      res.send(results)
+    }
+  })
+})
+
+//Ruta para eliminar toda la lista_espera de parte del manager
+app.delete('/vaciar', (req, res)=>{
+  database.query('DELETE FROM lista_espera')
 })
 
 
