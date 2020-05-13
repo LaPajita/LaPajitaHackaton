@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faKey} from '@fortawesome/free-solid-svg-icons';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
@@ -45,10 +46,9 @@ const Registration = () => {
                             height='auto' />
                         </div>
                         <div className="select text-center ">
-                            <a href="Entrar">Entrar</a>
-                            <a href="Registrarme">Registrarme</a>
+                        <Link to="./LogIn" className="loginLink1"> Entrar</Link>
+                        <Link to="./Registration" className="loginLink2"> Registrarme</Link>
                         </div>
-
                             <Form onSubmit={handleSubmit} className="login-form p-5">
                             
                                 <FormGroup>

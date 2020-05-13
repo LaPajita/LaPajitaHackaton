@@ -1,3 +1,38 @@
-.menuOptions{
-    justify-content: space-around;
+$Color_rojo: #FF030B;
+$Color_gris: #707070;
+
+.DetailBar {
+
+    & .cabeceraBar {
+        align-items: center;
+        padding: 10px 18px;
+
+        & .iconChevron {
+            margin-bottom: 10px;
+        }
+
+        & .divTitulo {
+            display: flex;
+            justify-content: center;
+
+            & .titulo {
+                color: $Color_rojo;
+                font-family: 'Yanone Kaffeesatz',
+                    sans-serif;
+                font-weight: bold;
+                font-size: 3rem;
+                margin: 0;
+            }
+        }
+
+        & .icon {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+    }
+
+    & .menuOptions {
+        justify-content: space-around;
+    }
 }
