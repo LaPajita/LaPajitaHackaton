@@ -110,6 +110,24 @@ app.post('/login', (req, res) => {
   })
 })
 
+//Ruta para apuntarse a lista de espera
+app.post('/:id_places/waitinglist/:id_user', (req, res) => {
+
+  const id_places = req.params.id_places;
+  const id_user = req.params.id_user;
+
+  database.query('SELECT id_user FROM lista_espera WHERE id_places=?', [id_user, id_places], (error, results) => {
+    error
+      ? res.send(error)
+      : res.send(results)
+    const a = results[0].id_places
+    console.log(a)
+  })
+
+
+})
+
+
 
 //ABRIMOS PUERTO
 app.listen(PORT, () => {
