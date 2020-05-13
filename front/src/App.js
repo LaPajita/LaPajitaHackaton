@@ -4,6 +4,7 @@ import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
+import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponent';
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
@@ -42,7 +43,6 @@ function App() {
             <p>loading...</p>
             :
             <>
-              <Menu />
               <Router>
                 <Route path="/" exact component={Home} />
                 <Route path="/LogIn" exact component={LogIn} />

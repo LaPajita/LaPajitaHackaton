@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.scss';
 import SimpleMap from './Map/SimpleMap';
 import MyContext from '../context';
+import Menu from './menu/Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faCocktail, faMapMarkedAlt, faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
 
@@ -44,53 +45,53 @@ function Home() {
     }
     return (
         <div className="Home">
+            < Menu />
             <div className="container-fluid">
                 <div className="row mapa">
                     <SimpleMap />
                 </div>
-                
-                    {state.bares && state.bares.map((bar, index) =>
-                        <div className="row cards" onClick={() => setStateContext({ ...state, selectedBar:index})} >
-                            <div className="col-12 col-sm-4 foto" style={{ backgroundImage: `url(${imagenesSeparadas[index][0]})`}}>
-                            </div>
-                            <div className="col-12 col-sm-8 cards_info">
-                                <div className="row title_icon">
-                                    <div className="col-10">
-                                        <h3 className="titulo">{bar.name}</h3>
-                                    </div>
-                                    <div className="col-2 icon" onClick={() => setFavSelect(!favSelect)}>
-                                        {favSelect ? fillHeart : heart}
-                                    </div>
-                                </div>
-                                <div className="row puntuation">
-                                    <div className="col-8 score">
-                                        {
-                                            score.map((number, index) => <div key={index} >
-                                                {index+1 <= Math.floor(bar.rating) ? cocktailFill : cocktail}
-                                                </div>)
-                                        }
-                                    </div>
-                                    <div className="col-4 ">
-                                        <p className="scoreText">{`${bar.rating}/5`}</p>
-                                    </div>
-                                </div>
-                                <div className="row adress">
-                                    <p><span>{mapDirection}</span>{bar.formatted_address}</p>
-                                </div>
-                                <div className="row telephone">
-                                    <p><span>{phone}</span>558 447 236</p>
-                                </div>
-                                <div className="row waiting_state" style={waitingStyle(bar.waiting_list)}>
-                                    <p><span>{clock}</span>{bar.waiting_list === 0 ? 'Lista de espera inactiva' : 'Lista de espera activa'}</p>
-                                </div>
-                                <Link to='/barDetail'>
-                                    <div className="row detail_button">
-                                        <p>VER DETALLE</p>
-                                    </div>
-                                </Link>
-                            </div>
+                {state.bares && state.bares.map((bar, index) =>
+                    <div className="row cards" onClick={() => setStateContext({ ...state, selectedBar: index })} >
+                        <div className="col-12 col-sm-4 foto" style={{ backgroundImage: `url(${imagenesSeparadas[index][0]})` }}>
                         </div>
-                    )}
+                        <div className="col-12 col-sm-8 cards_info">
+                            <div className="row title_icon">
+                                <div className="col-10">
+                                    <h3 className="titulo">{bar.name}</h3>
+                                </div>
+                                <div className="col-2 icon" onClick={() => setFavSelect(!favSelect)}>
+                                    {favSelect ? fillHeart : heart}
+                                </div>
+                            </div>
+                            <div className="row puntuation">
+                                <div className="col-8 score">
+                                    {
+                                        score.map((number, index) => <div key={index} >
+                                            {index + 1 <= Math.floor(bar.rating) ? cocktailFill : cocktail}
+                                        </div>)
+                                    }
+                                </div>
+                                <div className="col-4 ">
+                                    <p className="scoreText">{`${bar.rating}/5`}</p>
+                                </div>
+                            </div>
+                            <div className="row adress">
+                                <p><span>{mapDirection}</span>{bar.formatted_address}</p>
+                            </div>
+                            <div className="row telephone">
+                                <p><span>{phone}</span>558 447 236</p>
+                            </div>
+                            <div className="row waiting_state" style={waitingStyle(bar.waiting_list)}>
+                                <p><span>{clock}</span>{bar.waiting_list === 0 ? 'Lista de espera inactiva' : 'Lista de espera activa'}</p>
+                            </div>
+                            <Link to='/barDetail'>
+                                <div className="row detail_button">
+                                    <p>VER DETALLE</p>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     )
