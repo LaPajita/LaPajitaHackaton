@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './componentes/Home';
 import MyContext from "./context";
-import "./App.css";
+import "./App.scss";
 import Menu from './componentes/menu/Menu';
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
@@ -10,6 +10,8 @@ import DetailBar from './componentes/DetailBar/DetailBar';
 import Opiniones from './componentes/DetailBar/Opiniones';
 import Horario from './componentes/DetailBar/Horario';
 import Mapa from './componentes/DetailBar/Mapa';
+
+
 
 function App() {
   const [hooksState, setHooksState] = useState({});
@@ -40,7 +42,8 @@ function App() {
       <div className="App">
         {
           loading ?
-            <p>loading...</p>
+             <div className='ripplerer'><div><div className="lds-ripple"><div></div><div></div></div></div></div>
+            
             :
             <>
               <Menu />
