@@ -5,6 +5,9 @@ $Color_gris: #707070;
 
     & .mapa {
         height: 40vh;
+        position: sticky;
+        top: 0;
+        z-index: 2;
     }
 
     & .cards {
