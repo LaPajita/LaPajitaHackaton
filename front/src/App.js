@@ -5,6 +5,7 @@ import LogIn from './componentes/login/LogIn';
 import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
+import Registration from './componentes/Registration/Registration';
 // import Side from './componentes/menu/Side';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Router>
           <Route path="/" exact component={Home} />
           <Route path="/LogIn" exact component={LogIn} />
+          <Route path="/Registration" exact component={Registration} />
         </Router>
       </div>
     </MyContext.Provider>
