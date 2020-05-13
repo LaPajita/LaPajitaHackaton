@@ -4,7 +4,7 @@ $Color_gris: #707070;
 .Home {
 
     & .mapa {
-        height: 30vh;
+        height: 40vh;
     }
 
     & .cards {
@@ -46,13 +46,20 @@ $Color_gris: #707070;
                     font-weight: bold;
                     font-size: 3rem;
                 }
+
+                & .icon {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 1rem;
+                }
             }
 
             & .puntuation {
                 & .score {
                     display: flex;
                     justify-content: flex-start;
-                    & div{
+
+                    & div {
                         margin-right: 0.5rem;
                     }
                 }
@@ -84,17 +91,26 @@ $Color_gris: #707070;
                 }
             }
 
+            & a:hover,
+            a:visited,
+            a:link,
+            a:active {
+                text-decoration: none;
+                display: contents !important;
+            }
+
             & .detail_button {
                 justify-content: center;
                 background-color: $Color_rojo;
                 border-radius: 20px;
-                padding: 4px;
+                padding: 8px;
                 color: white;
                 font-family: 'Yanone Kaffeesatz',
                     sans-serif;
                 font-size: larger;
-                & p{
-                   margin: 1px; 
+
+                & p {
+                    margin: 1px;
                 }
             }
         }
