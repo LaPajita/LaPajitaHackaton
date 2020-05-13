@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
-const Mapa=()=>{
+
+
+
+const Mapa = () => { 
+
+    
     return(
-        <p>Mapa</p>
+        <Fragment>
+            <p>location</p>
+            <img className='map-detalle'
+            src=''
+            alt='location cocktail bar'
+            width= '100px'
+            height='auto' />
+        </Fragment>
+        
+        
     )
 }
 
