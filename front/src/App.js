@@ -5,7 +5,7 @@ import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
 import CarouselComponent from './componentes/Carousel/CarouselComponent';
-import LogIn from './componentes/login/LogIn'
+import LogIn from './componentes/login/LogIn';
 // import Side from './componentes/menu/Side';
 
 function App() {
@@ -17,12 +17,11 @@ function App() {
     <MyContext.Provider value={stateAndFunction}>
       <div className="App">
         <Menu />
-        {/* <CarouselComponent /> */}
         {/* <Side /> */}
-        
         <Router>
           <Route path="/" exact component={Home} />
           <Route path="/LogIn" exact component={LogIn} />
+          <Route path='/barDetail' component={CarouselComponent}/>
         </Router>
       </div>
     </MyContext.Provider>
