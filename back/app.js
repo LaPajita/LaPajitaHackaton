@@ -36,7 +36,7 @@ app.get('/places', (req, res) => {
 
 //Ruta buscar usuarios por :id
 app.get('/usuarios/:id', (req, res)=>{
-  database.query('SELECT * FROM users', (error, results)=>{
+  database.query('SELECT * FROM users WHERE id = ?', req.params.id, (error, results)=>{
     if(error){
       console.log(error)
       res.status(404).send(error)
