@@ -5,6 +5,7 @@ import Mapa from './Mapa';
 import Opiniones from './Opiniones';
 import Carousel from './Carousel/CarouselComponent';
 import './DetailBar.scss';
+import Menu from '../menu/Menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -35,6 +36,7 @@ const DetailBar = () => {
 
     return (
         <div className='DetailBar'>
+            < Menu/>
             <div className="row cabeceraBar">
                 <Link to='/'>
                     <div className="col-2 iconChevron">
