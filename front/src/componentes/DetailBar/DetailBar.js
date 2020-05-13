@@ -36,7 +36,7 @@ const DetailBar = () => {
 
     return (
         <div className='DetailBar'>
-            < Menu/>
+            <Menu/>
             <div className="row cabeceraBar">
                 <Link to='/'>
                     <div className="col-2 iconChevron">
