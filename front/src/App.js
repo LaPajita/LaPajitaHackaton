@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.css";
+import Menu from './componentes/menu/Menu';
+// import Side from './componentes/menu/Side';
 
 function App() {
   const [hooksState, setHooksState] = useState({});
@@ -12,8 +14,12 @@ function App() {
   return (
     <MyContext.Provider value={stateAndFunction}>
       <div className="App">
+        <Menu />
+        {/* <Side /> */}
+        
         <Router>
           <Route path="/" exact component={Home} />
+          <Route path="/LogIn" exact component={LogIn} />
         </Router>
       </div>
     </MyContext.Provider>
