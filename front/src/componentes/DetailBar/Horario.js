@@ -50,31 +50,37 @@ const Horario = () => {
           <div className="row">
             <div className="col-4 dia">Martes</div>
             <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+            <hr></hr>
           </div>
 
           <div className="row">
             <div className="col-4 dia">Miércoles</div>
             <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+            <hr></hr>
           </div>
 
           <div className="row">
             <div className="col-4 dia">Jueves</div>
             <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+            <hr></hr>
           </div>
 
           <div className="row">
             <div className="col-4 dia">Viernes</div>
             <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+            <hr></hr>
           </div>
 
           <div className="row">
             <div className="col-4 dia">Sábado</div>
             <div className="col-8 hora">6:00 P.M - 1:00 A.M</div>
+            <hr></hr>
           </div>
 
           <div className="row">
             <div className="col-4 dia">Domingo</div>
             <div className="col-8 hora">Cerrado</div>
+            <hr></hr>
           </div>
         </div>
       </div>
