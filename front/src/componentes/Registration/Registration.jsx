@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './Registration.scss';
-
-
+import MyContext from "../../context";
 
 const Registration = () => {
     const [values, setValues] = useState(
@@ -33,10 +32,15 @@ const Registration = () => {
         submit();
     };
 
+    // ------CONTEXTO------
+    const valueFromContext = useContext(MyContext);
+    const state = valueFromContext.hooksState
+    const setStateContext = valueFromContext.setHooksState;
+
     const submit = () => {
         fetch('https://thelittlestraw.herokuapp.com/register', {
             method: 'POST',
-            mode: 'no-cors',
+            // mode: 'no-cors',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -48,6 +52,12 @@ const Registration = () => {
                 confirmPassword: values.confirmPassword
             })
         })
+            .then((response) => {
+                return response.json()
+            })
+            .then((responseJson) => {
+                setStateContext({ ...state, usuario: responseJson })
+            })
     }
 
     return (
@@ -60,7 +70,7 @@ const Registration = () => {
                             <img className='logo'
                                 src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
                                 alt='logo La Pajita'
-                                width='100px'
+                                width='200px'
                                 height='auto' />
                         </div>
                         <div className="select text-center ">

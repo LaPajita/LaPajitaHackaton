@@ -1,10 +1,12 @@
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './LogIn.scss';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import MyContext from "../../context";
+
 
 const LogIn = () => {
     const [values, setValues] = useState(
@@ -32,10 +34,15 @@ const LogIn = () => {
         submit();
     };
 
-    const submit=()=> {
+    // ------CONTEXTO------
+    const valueFromContext = useContext(MyContext);
+    const state = valueFromContext.hooksState
+    const setStateContext = valueFromContext.setHooksState;
+
+    const submit = () => {
         fetch('https://thelittlestraw.herokuapp.com/login', {
             method: 'POST',
-            mode: 'no-cors',
+            // mode: 'no-cors',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -45,6 +52,12 @@ const LogIn = () => {
                 email: values.email
             })
         })
+            .then((response) => {
+                return response.json()
+            })
+            .then((responseJson) => {
+                setStateContext({ ...state, usuario: responseJson })
+            })
     }
 
     return (
@@ -57,7 +70,7 @@ const LogIn = () => {
                             <img className='logo'
                                 src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
                                 alt='logo La Pajita'
-                                width='100px'
+                                width='200px'
                                 height='auto' />
                         </div>
                         <div className="select text-center ">
@@ -66,7 +79,7 @@ const LogIn = () => {
                         </div>
                         <Form onSubmit={handleSubmit} className="login-form">
                             <FormGroup>
-                                <Label className="labelForm">{<FontAwesomeIcon icon={faUser} />} Usuario</Label>
+                                <Label className="labelForm">{<FontAwesomeIcon icon={faUser} />} Email</Label>
                                 <Input
                                     name='email'
                                     type='email'
@@ -88,7 +101,7 @@ const LogIn = () => {
                             <div className="passwordForgot text-center ">¿Has olvidado tu contraseña?</div>
                         </Form>
                         <div className="formButton">
-                            <Button onClick={()=> submit()} className="btn-lg btn-dark btn-block buttonStyle ">  <span>ENTRAR</span></Button>
+                            <Button onClick={() => submit()} className="btn-lg btn-dark btn-block buttonStyle ">  <span>ENTRAR</span></Button>
                         </div>
                     </div>
                 </div>

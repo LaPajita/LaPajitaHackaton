@@ -6,15 +6,13 @@ import "./App.css";
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
-/* import Carta from './componentes/DetailBar/Carta'; */
-// import Side from './componentes/menu/Side';
 
 function App() {
   const [hooksState, setHooksState] = useState({});
-  
+
   const [loading, setLoading] = useState(true);
 
-  //La primera vez que se renderiza hacemos la llamada a la api para meter los datos en el contexto
+  // La primera vez que se renderiza hacemos la llamada a la api para meter los datos en el contexto
   useEffect(() => {
     fetch('https://thelittlestraw.herokuapp.com/places')
       .then((response) => {
@@ -49,8 +47,6 @@ function App() {
               </Router>
             </>
         }
-        {/* <Side /> */}
-
       </div>
     </MyContext.Provider>
   );
