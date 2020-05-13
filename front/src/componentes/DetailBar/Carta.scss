@@ -1,0 +1,97 @@
+.cartaPage .container-fluid{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    height: min-content;
+    padding: 0;
+    margin: 0;
+    
+   }
+
+
+.row{
+    padding: 2% 10% 2% 10%;
+}
+  .priceText{
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .priceText h2{
+    border-bottom: 2px solid #FF030B;
+    color:#707070;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+  /*   padding-top: 5%; */
+}
+
+.martini{
+    width: auto;
+    height: 100px;
+  
+}
+
+.priceValue{
+    display: flex;
+    justify-content: center;
+}
+
+
+.priceValue p{
+  text-align: center;
+  font-size: 1.3rem;
+/*   font-weight: bold; */
+  color: #707070;
+}
+
+hr{
+    height:2px;
+    border-width: 0;
+    color:#FF030B;
+    background-color:#FF030B;
+    width:85%;
+} 
+
+
+.card-title h4{
+    color:#707070;
+    font-weight: bold;
+}
+
+.card-text{
+    color:#707070;
+}
+
+
+ 
+/*---------------- Media query for larger screens (desktop)---------------- */
+
+ @media (min-width:769px) and (max-height: 1366px)   {
+     
+.martini{
+    width: auto;
+    height: 170px;
+  
+}
+
+.card-text{
+    font-size: 1.6rem;
+}
+
+.card-title{
+    color:#707070;
+    font-size: 2rem;
+    padding-bottom:3%;
+}
+
+.priceValue p{
+    font-size: 2rem;
+  }
+
+.priceText h2{
+    font-size: 2.5rem;
+}
+   
+}   

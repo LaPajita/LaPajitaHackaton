@@ -47,7 +47,7 @@ const Menu = (props) => {
               <NavLink href="/favoritos"><FontAwesomeIcon icon={faHeart} /> Mis Favoritos  </NavLink>
             </NavItem>
             <NavItem id='logout'>
-            <NavLink><FontAwesomeIcon icon={faPowerOff} /> Log out</NavLink>
+            <NavLink href="/LogIn"><FontAwesomeIcon icon={faPowerOff} /> Log out</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
