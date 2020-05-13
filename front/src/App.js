@@ -4,6 +4,7 @@ import Home from './componentes/Home';
 import MyContext from "./context";
 import "./App.css";
 import Menu from './componentes/menu/Menu';
+import Carousel from './componentes/Carousel/Carousel';
 // import Side from './componentes/menu/Side';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <MyContext.Provider value={stateAndFunction}>
       <div className="App">
         <Menu />
-        <Carousel/>
+        <Carousel />
         {/* <Side /> */}
         
         <Router>
