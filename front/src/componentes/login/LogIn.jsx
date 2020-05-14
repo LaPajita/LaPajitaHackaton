@@ -76,8 +76,8 @@ const LogIn = () => {
                                 height='auto' />
                         </div>
                         <div className="select text-center ">
-                            <Link to="./LogIn" className="loginLink1"> Entrar</Link>
-                            <Link to="./registro" className="loginLink2"> Registrarme</Link>
+                            <Link to="/" className="loginLink1"> Entrar</Link>
+                            <Link to="/registro" className="loginLink2"> Registrarme</Link>
                         </div>
                         <Form onSubmit={handleSubmit} className="login-form">
                             <FormGroup>
