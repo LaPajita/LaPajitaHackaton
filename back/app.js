@@ -114,10 +114,12 @@ app.post("/register", async (req, res) => {
 
 //Ruta para login
 app.post("/login", (req, res) => {
+  let errors = [];
+
   database.query("SELECT * FROM users", async (error, results) => {
     //Localizamos al user que quiere iniciar sesión
     if (error) {
-      console.log("Error al hacer la consulta");
+      //console.log("Error al hacer la consulta");
       res.send(error);
     } else {
       const thisUser = results.find((user) => {
@@ -125,10 +127,11 @@ app.post("/login", (req, res) => {
       });
 
       if (thisUser == null) {
-        res.send("Este usuario no existe");
+        errors.push({ msg: "La constraseña o el usuario no existen" });
+        res.send(errors);
       } else {
         if (await bcrypt.compare(req.body.password, thisUser.password)) {
-          //Enviar usuario que loguea
+          //Devolución de datos tras el login
           database.query(
             "SELECT id, name, email, profile_image FROM users WHERE email=?",
             req.body.email,
@@ -137,7 +140,8 @@ app.post("/login", (req, res) => {
             }
           );
         } else {
-          res.send("La constraseña o el usuario no coincide");
+          errors.push({ msg: "La constraseña o el usuario no existen" });
+          res.send(errors);
         }
       }
     }
