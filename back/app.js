@@ -137,7 +137,7 @@ app.post("/login", (req, res) => {
             }
           );
         } else {
-          res.send("La constraseña o el usuario no coincide");
+          res.send({ msg: "La constraseña o el usuario no coincide" });
         }
       }
     }
