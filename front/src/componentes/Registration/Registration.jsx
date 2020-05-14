@@ -76,7 +76,7 @@ const Registration = () => {
                         </div>
                         <div className="select text-center ">
                             <Link to="/" className="loginLink1"> Entrar</Link>
-                            <Link to="/Registration" className="loginLink2"> Registrarme</Link>
+                            <Link to="/registro" className="loginLink2"> Registrarme</Link>
                         </div>
                         <Form onSubmit={handleSubmit} className="login-form">
                             <FormGroup>
