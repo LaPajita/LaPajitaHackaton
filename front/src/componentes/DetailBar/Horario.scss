@@ -1,3 +1,41 @@
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .lista {
+    border: 2px solid red;
+    margin: 10px 2rem;
+    padding: 23px;
+    border-radius: 60px;
+  
+    & p {
+      color: grey;
+    }
+  
+    & .miBoton {
+      background-color: red;
+      border-radius: 20px;
+      color: white;
+      padding: 0.5rem;
+      width: 10rem;
+      border-style: none;
+    }
+  }
+  
+  .Horario {
+    padding: 40px 0;
+  
+    & hr {
+      width: 100%;
+    }
+  
+    & p {
+      margin: 0 1rem;
+    }
+  }
+
+
 /* .container-fluid {
     padding: 2rem;
     height: 50vh;
@@ -15,30 +53,13 @@
     float: right;
 } */
 
-.lista-espera {
-    /* color: red;
-    display: flex;
-    height: 45vh;
-    border-radius: 10%; */
+/* .lista-espera {
+  
 
     padding: 1rem;
     padding-left: 1.5rem;
-    /* width: 50%;
-    margin-left: 25%; */
-    /* border-style: double; */
-    
 }
-
-
-  
-  /* .lista {
-    padding: 5rem;
-    justify-content: center;
-    padding-top: 10%;
-    border-style: 2px red;
-  } */
-  
-  .lista p {
+.lista p {
     color: grey;
   }
   
@@ -71,17 +92,18 @@
   .Horario {
       padding: 1rem;
       padding-left: 1.5rem;
+      padding-top: 4%;
     }
 
     .container-fluid_lista{
         /* padding: 5rem; */
-        justify-content: center;
         /* padding-top: 10%; */
+        /* justify-content: center;
         border-style: 2px red;
-        height: 50vh;
-    }
+        height: 30vh;
+    } */
 
-    hr{
+    /* hr{
         width: 100%;
     }
 
@@ -99,6 +121,6 @@
 
     .row.miBoton2 {
         text-align: center;
-    }
+    }  */
 
   
