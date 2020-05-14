@@ -46,11 +46,11 @@ const DetailBar = () => {
         <div className='DetailBar'>
             <Menu/>
             <div className="row cabeceraBar">
-                <Link to='/Home'>
-                    <div className="col-2 iconChevron">
-                        {chevron}
+                
+                    <div className="col-2 iconChevron"><Link to='/Home'>
+                        {chevron}</Link>
                     </div>
-                </Link>
+                
                 <div className="col-8 divTitulo">
                     <h3 className="titulo">
                         {
