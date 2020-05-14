@@ -20,7 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//RUTA JSON DE PAJITA
+//Ruta json de los luegaros de los bares
 app.get("/places", (req, res) => {
   database.query("SELECT * FROM places", (error, results) => {
     if (error) {
@@ -188,7 +188,7 @@ app.post("/:id_places/waitinglist/:id_user", (req, res) => {
 });
 
 //Ruta para desapuntarse a la lista de espera
-app.delete("/:id_places/desapuntarse/:id_user", (req, res) => {
+app.delete("/:id_places/unsubscribe/:id_user", (req, res) => {
   database.query(
     "DELETE FROM lista_espera WHERE id_user = ? AND id_places = ?",
     [req.params.id_user, req.params.id_places],
