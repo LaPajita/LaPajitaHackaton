@@ -1,4 +1,7 @@
+<<<<<<< HEAD
   
+=======
+>>>>>>> 0283baf75ce689cbeeb8f02d13dd921c54310711
 import React from "react";
 import "./Horario.scss";
 

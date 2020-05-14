@@ -7,7 +7,7 @@
     justify-content: center;
     height: min-content;
     
-
+    
     .comment-button {
         margin: 2rem;
         background-color: #FF030B;
@@ -58,9 +58,10 @@
                 color: #707070;
             }
             .avatar {
-                margin: 2rem;
-                height: auto;
-                width: 25%;
+                margin: 3rem 2rem;
+                height: 15vh;
+                width: 15vw;
+                border-radius: 50%;
                 max-width: 30%;
                 -o-object-fit: cover;
                    object-fit: cover;
@@ -76,6 +77,9 @@
                 
               // }
               .card-body {
+                display: flex;
+                align-content: flex-start;
+                margin-top: 2rem;
                 width: 12em;
                 max-height: 100%;
                 -webkit-box-flex: 1;
@@ -87,7 +91,11 @@
                         flex-flow: column nowrap;
                 -webkit-box-pack: start;
                         justify-content: flex-start;
-                padding: 1.6em;
+                padding: 0.5em;
+                p {
+                  margin-top: 1rem;
+                  font-size: 10px;
+                }
               }
               
               .opinion-button {
