@@ -1,7 +1,28 @@
-import React from "react";
+import React, {useContext, useState, useEffect} from "react";
 import "./Horario.scss";
+import MyContext from '../../context';
 
 const Horario = () => {
+
+  // ------CONTEXTO------
+  const valueFromContext = useContext(MyContext);
+  const state = valueFromContext.hooksState
+  const setStateContext = valueFromContext.setHooksState;
+  const [totalPersons, setTotalpersons]= useState('')
+
+  useEffect(()=>{
+    const id_place = state.id_place
+    const id_user = state.usuario.id
+    fetch(`https://thelittlestraw.herokuapp.com/${id_place}/waitinglist/${id_user}`)
+      .then((response) => {
+        return response.json()
+      })
+      .then((dataJson) => {
+        setTotalpersons({dataJson})
+      })
+  },[])
+
+  console.log(totalPersons)
 
   return (
     <React.Fragment>

@@ -18,8 +18,6 @@ const LogIn = () => {
 
     const handleChange = event => {
         const { name, value } = event.target;
-        console.log(event.target.name);
-        console.log(event.target.value);
         setValues(
             {
                 ...values,
@@ -56,12 +54,16 @@ const LogIn = () => {
                 return response.json()
             })
             .then((responseJson) => {
+                //si recibo un error, entonces muestro los errores
+                //si no recibo error, hago click en buttonToHome y actualiza el estado del contexto
+                document.getElementById("buttonToHome").click();                    
                 setStateContext({ ...state, usuario: responseJson })
             })
     }
 
-    return (
+    
 
+    return (
         <div className="loginInPage">
             <div className="container-fluid">
                 <div className="row">
@@ -102,21 +104,14 @@ const LogIn = () => {
                         </Form>
                         <div className="formButton">
                             <Button onClick={() => submit()} className="btn-lg btn-dark btn-block buttonStyle ">  <span>ENTRAR</span></Button>
+                            <Link to ="/" id="buttonToHome" style={{display: 'none'}}>boton transparente</Link>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        
     )
 }
 
 export default LogIn;
-
-/*
-<div class="btn-holder">
-  <button class="btn btn-1 hover-filled-slide-down">
-    <span>hover me</span>
-  </button>
- </div>
-   */

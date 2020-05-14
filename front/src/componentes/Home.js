@@ -52,7 +52,14 @@ function Home() {
                     <SimpleMap />
                 </div>
                 {state.bares && state.bares.map((bar, index) =>
-                    <div className="row cards" onClick={() => setStateContext({ ...state, selectedBar: index })} >
+                    < div className = "row cards"
+                    onClick = {
+                        () => setStateContext({
+                            ...state,
+                            selectedBar: index,
+                            id_place: bar.id
+                        })
+                    } >
                         <div className="col-12 col-sm-4 foto" style={{ backgroundImage: `url(${imagenesSeparadas[index][0]})` }}>
                         </div>
                         <div className="col-12 col-sm-8 cards_info">

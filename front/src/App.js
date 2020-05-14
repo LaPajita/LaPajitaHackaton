@@ -8,17 +8,12 @@ import CarouselComponent from './componentes/DetailBar/Carousel/CarouselComponen
 import Registration from './componentes/Registration/Registration';
 import LogIn from './componentes/login/LogIn';
 import DetailBar from './componentes/DetailBar/DetailBar';
-/* import Carta from './componentes/DetailBar/Carta'; */
-// import Side from './componentes/menu/Side';
 import Opiniones from './componentes/DetailBar/Opiniones';
 import Horario from './componentes/DetailBar/Horario';
 import Mapa from './componentes/DetailBar/Mapa';
 
-
-
 function App() {
   const [hooksState, setHooksState] = useState({});
-
   const [loading, setLoading] = useState(true);
 
   // La primera vez que se renderiza hacemos la llamada a la api para meter los datos en el contexto
@@ -31,7 +26,8 @@ function App() {
         setHooksState({
           bares: dataJson,
           usuario: '',
-          selectedBar: ''
+          selectedBar: '',
+          id_place: ''
         })
         setLoading(false);
       })
@@ -46,7 +42,6 @@ function App() {
         {
           loading ?
              <div className='ripplerer'><div><div className="lds-ripple"><div></div><div></div></div></div></div>
-            
             :
             <>
               <Router>
