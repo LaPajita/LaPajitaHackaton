@@ -1,75 +1,63 @@
+.loginInPage {
+  background-color: #FF030B;
+  background-image: url("https://s6.gifyu.com/images/background-login239682d18d609bbbf.png");
+  box-shadow: inset 0 0 0 1000px rgba(54, 1, 2, 0.521);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
 
-.loginInPage{
- /*  padding: 10%; */
- background-color:  #FF030B;
- background-image: url("https://s6.gifyu.com/images/background-login239682d18d609bbbf.png");
- box-shadow: inset 0 0 0 1000px rgba(54, 1, 2, 0.521);
- background-position: center center;
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-size: cover;
- /* height: min-content; */
- height: 100vh;
-/*  padding: 2rem; */
-} 
-
-.row{
+.row {
   padding: none;
 }
-/* .row {
-  padding: 0;
-} */
-/* .loginInPage p {
-  font-family: 'Raleway', sans-serif;
-} */
+
 .loginInPage h1 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-#logoLogin{
-  padding-top:10%;
-  width: 60%; 
+#logoLogin {
+  padding-top: 10%;
+  width: 60%;
 }
 
+.login-form {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 35px;
+  background-color: rgba(172, 96, 99, 0.685);
+  padding: 1.5rem;
+}
 
-.login-form{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    width: 100%;
-    max-width: 500px; 
-    margin: auto;
-    height: auto;
-    border: 1px solid transparent;
-    border-radius: 35px;
-    background-color: rgba(172, 96, 99, 0.685);
-    padding: 1.5rem;
-  }
+.loginInPage .btn-block {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  border-radius: 35px;
+  font-weight: bold;
+  width: 250px;
+}
 
-  .loginInPage .btn-block{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    border-radius: 35px;
-    font-weight: bold;
-    width:250px; 
-  }
-
-  .loginInPage .btn-dark {
-    color: #FF030B;
-    background-color: white;
-    border-color: #FF030B;
+.loginInPage .btn-dark {
+  color: #FF030B;
+  background-color: white;
+  border-color: #FF030B;
 }
 
 .loginInPage .btn-dark:hover {
   color: #fff;
-  background-color:#FF030B;
+  background-color: #FF030B;
   border-color: #FF030B;
 }
 
-
 .loginInPage .btn-lg {
-  padding: 2px; 
+  padding: 2px;
 }
 
-
-.loginInPage .form-control{
+.loginInPage .form-control {
   border: 0;
   outline: 0;
   background: transparent;
@@ -77,47 +65,39 @@
   border-radius: 0;
 }
 
-label{
+label {
   font-size: 1.3rem;
   padding-top: 5%;
   color: white;
 }
 
-
-label .labelForm{
+label .labelForm {
   text-align: left;
 }
 
-.formButton{
+.formButton {
   display: flex;
   justify-content: center;
- /*  padding-top: 3%; */
-  padding-top: 5%; 
+  padding-top: 5%;
 }
 
-.headingForm{
- padding-bottom: 10%;
+.headingForm {
+  padding-bottom: 10%;
 }
 
-
-
-.select{
-/*   padding-bottom: 5%; */
+.select {
   display: flex;
   justify-content: center;
   align-items: center;
-} 
- 
+}
+
 a {
- 
+
   line-height: 1em;
-  /* display: inline-block; */
   text-decoration: none;
   padding: 4px;
   margin: 12px;
- /*  text-decoration: underline; */
 }
-
 
 .loginLink1 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -131,9 +111,9 @@ a {
   font-size: 1.4rem;
 }
 
-.select  a:hover{
+.select a:hover {
   text-decoration: none;
- /*  color: #7D747D;  */
+  /*  color: #7D747D;  */
   color: white;
   font-weight: bold;
   border-bottom: 1.5px solid white;
@@ -146,115 +126,97 @@ a {
 }
 
 
-  label .labelForm{
-    text-align: left;
-  }
+label .labelForm {
+  text-align: left;
+}
 
-  
+
 /*---------------- Media query for larger screens (desktop)---------------- */
 
- @media (min-width:768px) and (max-height: 1367px)   {
-      .headingForm {
-            padding-bottom: 5%;
-      }
+@media (min-width:768px) and (max-height: 1367px) {
+  .headingForm {
+    padding-bottom: 5%;
+  }
 
-      .formButton {
-        padding-top: 3%; 
-      }
+  .formButton {
+    padding-top: 3%;
+  }
 
-      #logoLogin{
-      padding-top: 2%; 
-        width: 20%;
-    } 
+  #logoLogin {
+    padding-top: 2%;
+    width: 20%;
+  }
 
-      .select{
-        padding-bottom: 2%;
-      } 
+  .select {
+    padding-bottom: 2%;
+  }
 
-      .loginLink1 {
-        font-size: 2rem;
-      }
-      
-      .loginLink2 {
-        font-size: 2rem;
-      }
+  .loginLink1 {
+    font-size: 2rem;
+  }
 
-
-      label{
-        font-size: 1.7rem;
-      }
-
-      .loginInPage .passwordForgot {
-        font-size: 1.4rem;
-      }
-
-      .loginInPage .btn-dark {
-        font-size: 1.7rem;
-        
-    }
-}  
-
-/*---------------- iphone-5 media query--------------- */
-@media (min-width: 320px) and (max-height: 640px) { 
-  #logoLogin{
-    padding-top: 5%;
-    width: 45%; 
-}
-
-.login-form {
-  padding: 1rem;
-}
-
-.headingForm {
-   padding-bottom: 3%;
-}
-
-
-.loginLink1 {
-  font-size: 1.3rem;
-}
-
-.loginLink2 {
-  font-size: 1.3rem;
-}
-
-label{
-  font-size: 1.1rem;
-}
-
-.loginInPage .btn-block {
-  width: 200px;
-}
-/* 
-
-.row {
-  padding: 2%;
-} */
-
-/* .loginInPage {
-  padding: 1rem;
-} */
-
-/* .login-form {
-  padding: 1rem;
-} */
-
+  .loginLink2 {
+    font-size: 2rem;
   }
 
 
-@media (min-height: 1024px) { 
-.loginInPage{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  label {
+    font-size: 1.7rem;
+  }
+
+  .loginInPage .passwordForgot {
+    font-size: 1.4rem;
+  }
+
+  .loginInPage .btn-dark {
+    font-size: 1.7rem;
+
+  }
 }
 
-#logoLogin{
-  padding-top: 2%; 
+/*---------------- iphone-5 media query--------------- */
+@media (min-width: 320px) and (max-height: 640px) {
+  #logoLogin {
+    padding-top: 5%;
+    width: 45%;
+  }
+
+  .login-form {
+    padding: 1rem;
+  }
+
+  .headingForm {
+    padding-bottom: 3%;
+  }
+
+
+  .loginLink1 {
+    font-size: 1.3rem;
+  }
+
+  .loginLink2 {
+    font-size: 1.3rem;
+  }
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  .loginInPage .btn-block {
+    width: 200px;
+  }
+}
+
+
+@media (min-height: 1024px) {
+  .loginInPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #logoLogin {
+    padding-top: 2%;
     width: 40%;
-} 
-
- 
-} 
-
-
+  }
+}

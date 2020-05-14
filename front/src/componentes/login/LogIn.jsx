@@ -54,14 +54,14 @@ const LogIn = () => {
                 return response.json()
             })
             .then((responseJson) => {
-                //si recibo un error, entonces muestro los errores
-                //si no recibo error, hago click en buttonToHome y actualiza el estado del contexto
-                document.getElementById("buttonToHome").click();                    
-                setStateContext({ ...state, usuario: responseJson })
+                if (Object.keys(responseJson[0]).length <= 1) {
+                    console.log("mal");
+                } else {
+                    document.getElementById("buttonToHome").click();
+                    setStateContext({ ...state, usuario: responseJson });
+                }
             })
     }
-
-    
 
     return (
         <div className="loginInPage">
