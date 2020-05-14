@@ -46,7 +46,7 @@ const Horario = () => {
   const deleteList = () => {
     const id_place = state.id_place
     const id_user = (state.usuario[0] || {}).id
-    fetch(`https://thelittlestraw.herokuapp.com/${id_place}/waitinglist/${id_user}`, {
+    fetch(`https://thelittlestraw.herokuapp.com/${id_place}/unsubscribe/${id_user}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',

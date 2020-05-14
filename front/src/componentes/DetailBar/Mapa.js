@@ -4,8 +4,9 @@ import SimpleMap from'../Map/SimpleMap';
 
 const Mapa = () => { 
     return(
-        <p>hola</p>
-    //    <SimpleMap/>
+        <div className="row" style={{height:'80vh'}}>
+           <SimpleMap/> 
+        </div>
     )
 }
 
