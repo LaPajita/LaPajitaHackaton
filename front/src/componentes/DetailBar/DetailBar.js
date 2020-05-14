@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Carta from './Carta';
 import Horario from './Horario';
 import Mapa from './Mapa';
@@ -9,8 +9,16 @@ import Menu from '../menu/Menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import MyContext from '../../context';
+
 
 const DetailBar = () => {
+
+    // ------CONTEXTO------
+    const valueFromContext = useContext(MyContext);
+    const state = valueFromContext.hooksState
+    const setStateContext = valueFromContext.setHooksState;
+    
 
     //Iconos de Fontawesome
     const chevron = <FontAwesomeIcon icon={faChevronLeft} color='#FF030B' size="lg" />
@@ -38,13 +46,17 @@ const DetailBar = () => {
         <div className='DetailBar'>
             <Menu/>
             <div className="row cabeceraBar">
-                <Link to='/'>
+                <Link to='/Home'>
                     <div className="col-2 iconChevron">
                         {chevron}
                     </div>
                 </Link>
                 <div className="col-8 divTitulo">
-                    <h3 className="titulo">Titulo bar</h3>
+                    <h3 className="titulo">
+                        {
+                            (state.bares[state.selectedBar] || {}).name
+                        }
+                    </h3>
                 </div>
                 <div className="col-2 icon" onClick={() => setFavSelect(!favSelect)}>
                     {favSelect ? fillHeart : heart}

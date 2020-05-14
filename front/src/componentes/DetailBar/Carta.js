@@ -95,7 +95,6 @@ const Carta=()=>{
                     </div>
                 </div>
             </div>
-            <hr/>
             </div>
             </div>
         

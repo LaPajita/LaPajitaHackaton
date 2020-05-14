@@ -45,8 +45,8 @@ function App() {
             :
             <>
               <Router>
-              <Route path="/" exact component={Home} />
-              <Route path="/LogIn" exact component={LogIn} />
+              <Route path="/Home" exact component={Home} />
+              <Route path="/" exact component={LogIn} />
               <Route path='/barDetail' component={DetailBar}/>
               <Route path="/registro" exact component={ Registration } />
               {/* <Route path='/barDetail' component={CarouselComponent}/> */}

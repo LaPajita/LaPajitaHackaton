@@ -104,7 +104,7 @@ const LogIn = () => {
                         </Form>
                         <div className="formButton">
                             <Button onClick={() => submit()} className="btn-lg btn-dark btn-block buttonStyle ">  <span>ENTRAR</span></Button>
-                            <Link to ="/" id="buttonToHome" style={{display: 'none'}}>boton transparente</Link>
+                            <Link to ="/Home" id="buttonToHome" style={{display: 'none'}}>boton transparente</Link>
                         </div>
                     </div>
                 </div>

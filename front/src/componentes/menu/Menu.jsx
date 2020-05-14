@@ -24,7 +24,7 @@ const Menu = (props) => {
   return (
     <div className='Menu list-group'>
       <Navbar id='myNavBar' color="danger" navbar-dark dark sticky-top expand="md">
-        <NavbarBrand href="/">
+        <NavbarBrand href="/Home">
           <img className='logo'
           src='https://s6.gifyu.com/images/logo-blanco-lapajita.png'
           alt='logo La Pajita'
@@ -35,7 +35,7 @@ const Menu = (props) => {
         <Collapse  isOpen={isOpen} navbar className='white'>
           <Nav className="ml-auto super" navbar>
             <NavItem>
-              <NavLink href="/"><FontAwesomeIcon icon={faHome} /> Home  </NavLink>
+              <NavLink href="/Home"><FontAwesomeIcon icon={faHome} /> Home  </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/usuario"><FontAwesomeIcon icon={faUser} /> Mi Perfil</NavLink>
@@ -47,7 +47,7 @@ const Menu = (props) => {
               <NavLink href="/favoritos"><FontAwesomeIcon icon={faHeart} /> Mis Favoritos  </NavLink>
             </NavItem>
             <NavItem id='logout'>
-            <NavLink href="/LogIn"><FontAwesomeIcon icon={faPowerOff} /> Log out</NavLink>
+            <NavLink href="/"><FontAwesomeIcon icon={faPowerOff} /> Log out</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

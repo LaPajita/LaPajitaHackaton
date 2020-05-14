@@ -56,6 +56,7 @@ const Registration = () => {
                 return response.json()
             })
             .then((responseJson) => {
+                document.getElementById("buttonToRegister").click();   
                 setStateContext({ ...state, usuario: responseJson })
             })
     }
@@ -121,6 +122,7 @@ const Registration = () => {
                         </Form>
                         <div className="formButton">
                             <Button onClick={() => submit()} className="btn-lg btn-dark btn-block"> REGISTRARME </Button>
+                            <Link to="/" id="buttonToRegister" style={{ display: 'none' }}>boton transparente</Link>
                         </div>
                     </div>
                 </div>

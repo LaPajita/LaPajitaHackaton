@@ -38,7 +38,7 @@ const Horario = () => {
         return response.json()
       })
       .then((dataJson) => {
-        setTotalpersons(dataJson[0].total_de_clientes)
+        setTotalpersons((dataJson[0]|| {}).total_de_clientes || 0)
       })
   }, [apuntadoLista])
 
