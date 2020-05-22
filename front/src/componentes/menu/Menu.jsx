@@ -38,13 +38,13 @@ const Menu = (props) => {
               <NavLink href="/Home"><FontAwesomeIcon icon={faHome} /> Home  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/usuario"><FontAwesomeIcon icon={faUser} /> Mi Perfil</NavLink>
+              <NavLink ><FontAwesomeIcon icon={faUser} /> Mi Perfil</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/reservas"> <FontAwesomeIcon icon={faBookmark} /> Mis Reservas  </NavLink>
+              <NavLink > <FontAwesomeIcon icon={faBookmark} /> Mis Reservas  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/favoritos"><FontAwesomeIcon icon={faHeart} /> Mis Favoritos  </NavLink>
+              <NavLink ><FontAwesomeIcon icon={faHeart} /> Mis Favoritos  </NavLink>
             </NavItem>
             <NavItem id='logout'>
             <NavLink href="/"><FontAwesomeIcon icon={faPowerOff} /> Log out</NavLink>

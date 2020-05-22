@@ -11,8 +11,8 @@ import MyContext from "../../context";
 const LogIn = () => {
     const [values, setValues] = useState(
         {
-            email: "",
-            password: ""
+            email: "prueba@gmail.com",
+            password: "prueba"
         }
     );
 
@@ -87,7 +87,8 @@ const LogIn = () => {
                                     type='email'
                                     value={values.email}
                                     onChange={handleChange}
-                                    placeholder=''
+                                    placeholder='prueba@gmail.com'
+                                    
                                 />
                             </FormGroup>
                             <FormGroup>
@@ -97,7 +98,8 @@ const LogIn = () => {
                                     type='password'
                                     value={values.password}
                                     onChange={handleChange}
-                                    placeholder=''
+                                    placeholder='prueba'
+                                    
                                 />
                             </FormGroup>
                             <div className="passwordForgot text-center ">¿Has olvidado tu contraseña?</div>
